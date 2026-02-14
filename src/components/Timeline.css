@@ -1,0 +1,141 @@
+.timeline-container {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-header {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  color: #8b4a6b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-heart {
+  color: #ff69b4;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #ff69b4, #ffc0e0);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #ff69b4, #ffc0e0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  z-index: 1;
+  border: 3px solid #ffeef8;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
+  border: 1px solid rgba(255, 192, 224, 0.5);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.3);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #ff69b4;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-title {
+  font-size: 2rem;
+  color: #8b4a6b;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.timeline-description {
+  font-size: 1.1rem;
+  color: #8b4a6b;
+  line-height: 1.8;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    padding: 2rem 1rem;
+  }
+  
+  .timeline-header {
+    font-size: 2rem;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item {
+    padding-left: 2rem;
+  }
+  
+  .timeline-marker {
+    left: -1rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+}

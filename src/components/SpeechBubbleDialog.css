@@ -1,0 +1,113 @@
+.speech-bubble-dialog-modern {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  min-height: 0;
+}
+
+.speech-bubble-panel {
+  position: relative;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 1.5rem 2rem;
+  box-shadow: 
+    0 8px 32px rgba(255, 105, 180, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 192, 224, 0.3);
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.speech-bubble-content-modern {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.speech-bubble-text-modern {
+  color: #8b4a6b;
+  font-size: 1.1rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.typing-cursor-modern {
+  display: inline-block;
+  animation: blink-modern 1s infinite;
+  color: #ff69b4;
+  font-weight: bold;
+  margin-left: 3px;
+  vertical-align: baseline;
+}
+
+@keyframes blink-modern {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.speech-bubble-pointer {
+  position: absolute;
+  bottom: -12px;
+  right: 40px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 4px 8px rgba(255, 105, 180, 0.15));
+}
+
+.speech-bubble-pointer::before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: -11px;
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-top: 11px solid rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .speech-bubble-dialog-modern {
+    padding-left: 0.5rem;
+  }
+  
+  .speech-bubble-panel {
+    padding: 1.2rem 1.5rem;
+    border-radius: 20px;
+    min-height: 70px;
+  }
+  
+  .speech-bubble-text-modern {
+    font-size: 1rem;
+  }
+  
+  .speech-bubble-pointer {
+    right: 30px;
+    bottom: -10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+  }
+  
+  .speech-bubble-pointer::before {
+    left: -9px;
+    border-left-width: 9px;
+    border-right-width: 9px;
+    border-top-width: 9px;
+  }
+}

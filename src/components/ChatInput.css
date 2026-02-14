@@ -1,0 +1,104 @@
+.chat-input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+.chat-message-display {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  color: #8b4a6b;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+  border: 2px solid rgba(255, 192, 224, 0.5);
+  max-height: 100px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+.chat-input-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(255, 192, 224, 0.5);
+  border-radius: 25px;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #8b4a6b;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.chat-input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.chat-input::placeholder {
+  color: rgba(139, 74, 107, 0.5);
+}
+
+.chat-send-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff69b4, #ffc0e0);
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.chat-send-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+}
+
+.chat-send-button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .chat-input-container {
+    padding: 0 0.5rem;
+  }
+  
+  .chat-message-display {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+    max-height: 80px;
+  }
+  
+  .chat-input {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .chat-send-button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}

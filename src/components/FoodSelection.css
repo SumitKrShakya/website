@@ -1,0 +1,131 @@
+.food-selection {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 2rem 150px 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.food-container {
+  max-width: 1200px;
+  width: 100%;
+  flex: 1;
+}
+
+.food-title {
+  font-size: 3.5rem;
+  color: #8b4a6b;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+}
+
+.food-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.food-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.2);
+  border: 2px solid rgba(255, 192, 224, 0.5);
+}
+
+.food-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(255, 105, 180, 0.4);
+}
+
+.food-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.food-card:hover .food-image {
+  transform: scale(1.1);
+}
+
+.food-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.3), rgba(255, 192, 224, 0.3));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.food-card:hover .food-overlay {
+  opacity: 1;
+}
+
+.food-icon {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.food-name {
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  color: #8b4a6b;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .food-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-selection {
+    padding: 2rem 1rem 120px 1rem;
+  }
+  
+  .food-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .food-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .food-image-wrapper {
+    height: 180px;
+  }
+  
+  .food-name {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
